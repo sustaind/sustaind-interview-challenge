@@ -1,22 +1,22 @@
-Full-Stack Coding Task: Carbon Emissions Dashboard
+# Full-Stack Coding Task: Carbon Emissions Dashboard
 
-Objective
+## Objective
 
 Create a web application that allows users to compare CO2 emissions data between countries using the World Bank Climate Data API. The application should have both a backend API and a frontend interface.
 
 
-Backend Requirements
+## Backend Requirements
 
 1. Create a RESTful API with the following endpoint:
 
 * GET /api/emissions: Accepts query parameters for multiple country codes and a year range;
 * Example: /api/emissions?countries=USA,CHN,IND&start_year=2010&end_year=2019
-* Fetch data from the World Bank Climate Data API;
-* Process and aggregate the;
+* Fetch data from the [World Bank Climate Data API](https://data.worldbank.org/);
+* Process and aggregate the data;
 * Handle errors gracefully, including API failures and invalid input;
 * Return the processed data in a JSON format suitable for frontend consumption.
 
-Frontend Requirements
+## Frontend Requirements
 
 1. Create a frontend application with:
 
@@ -27,7 +27,7 @@ Frontend Requirements
 1. Implement error handling to display user-friendly messages for various error scenarios.
 2. Simple and accessible interface
 
-Code Quality Focus Areas
+## Code Quality Focus Areas
 
 1. Architecture: Demonstrate a clear separation of concerns between data fetching, processing, and presentation.
 2. Error Handling: 
@@ -35,7 +35,7 @@ Code Quality Focus Areas
 * Backend: Implement comprehensive error handling, including input validation, API error handling, and appropriate HTTP status codes.
 * Frontend: Display user-friendly error messages and handle loading states.
 
-1. Documentation:
+## Documentation:
 
 * Include clear, concise comments in your code.
 * Provide a README.md with:
@@ -47,7 +47,7 @@ Code Quality Focus Areas
 1. Code Style: Follow language-specific best practices and maintain consistent formatting.
 2. Testing: Write unit tests for critical functions, especially data processing and error handling routines.
 
-Evaluation Criteria
+## Evaluation Criteria
 
 1. Functionality: Does the application work as described?
 2. Code Quality: Is the code well-structured, readable, and maintainable?
@@ -57,12 +57,12 @@ Evaluation Criteria
 6. How is the infrastructure handled? Secrets management, how to run and how to deploy? (no need to have all of that setup just examples of how you would do it)
 7. Testing: Are there meaningful tests that cover critical functionality?
 
-Tooling
+## Tooling
 
-* TypeScript is a must but for backend, but feel free to use any library/framework/runtime standard library;
+* TypeScript is a must, but feel free to use any library/framework/runtime standard library;
 * Use any frontend UI library/framework and component library that you feel most comfortable with.
 
-Submission
+## Submission
 
 Fork this repository and then provide a link to a Git repository with your solution. Include any necessary setup instructions in the README.md file.
 

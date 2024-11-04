@@ -2,35 +2,22 @@
 
 ## Objective
 
-Create a web application that allows users to compare CO2 emissions data between countries using the World Bank Climate Data API. The application should have both a backend API and a frontend interface.
+Create a web application that shows carbon emissions by sector and by country.
 
+> Recommendation of open API to get this information from would be [the world bank climate data API](https://data.worldbank.org/).
 
-## Backend Requirements
-
-1. Create a RESTful API with the following endpoint:
-
-* GET /api/emissions: Accepts query parameters for multiple country codes and a year range;
-* Example: /api/emissions?countries=USA,CHN,IND&start_year=2010&end_year=2019
-* Fetch data from the [World Bank Climate Data API](https://data.worldbank.org/);
-* Process and aggregate the data;
-* Handle errors gracefully, including API failures and invalid input;
-* Return the processed data in a JSON format suitable for frontend consumption.
-
-## Frontend Requirements
-
-1. Create a frontend application with:
-
-* A table displaying the numerical data.
-* [Bonus] Displaying a chart of data;
-* [Bonus] Some table functionality of your choosing.
-
-1. Implement error handling to display user-friendly messages for various error scenarios.
-2. Simple and accessible interface
+## Acceptance Criteria
+* As a user I can see a table of emissions sorted descending and defaulting to a clearly indicated industry if none is chosen;
+* As a user I can filter by industry - minimum 2 industries;
+* [Bonus] As a user I can compare two countries emissions (preferable in a line chart);
+* [Bonus] As a user I can avoid scrolling too far into the bottom of the table to trigger certain actions (this can be done with sticky columns and/or pagination to avoid long scrolls).
 
 ## Code Quality Focus Areas
 
-1. Architecture: Demonstrate a clear separation of concerns between data fetching, processing, and presentation.
-2. Error Handling: 
+1. Architecture: Demonstrate a clear separation of concerns between data fetching, processing, and presentation - minimally showcasing some design patterns and architectural patterns like the simple layered architecture (Controller, Service and Repository;
+2. Performance (ideally backend strategies to reduce round trips or saving on external API calls);
+3. Error Handling and observability (good logging practices and proper communication of errors client side);
+4. Testable code - some core functionality should be tested as well.
 
 * Backend: Implement comprehensive error handling, including input validation, API error handling, and appropriate HTTP status codes.
 * Frontend: Display user-friendly error messages and handle loading states.
@@ -44,12 +31,9 @@ Create a web application that allows users to compare CO2 emissions data between
     * API documentation
     * Any assumptions or design decisions made
 
-1. Code Style: Follow language-specific best practices and maintain consistent formatting.
-2. Testing: Write unit tests for critical functions, especially data processing and error handling routines.
-
 ## Evaluation Criteria
 
-1. Functionality: Does the application work as described?
+1. Functionality: are the acceptance criteria met?
 2. Code Quality: Is the code well-structured, readable, and maintainable?
 3. Error Handling: How well does the application handle and communicate errors?
 4. Documentation: Is the code well-commented and is there comprehensive project documentation?

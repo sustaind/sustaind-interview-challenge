@@ -20,7 +20,7 @@ This challenge will be mostly to evaluate Engineering skills - risk assessment, 
 ## Tools
 
 - Use any diagramming tool and then embed it into markdown files when documenting the overall problem and respective solution;
-- Take into consideration that we, as a company, use mostly cloud native infrastructure in AWS - so using AWS based services will probably me more representative of the day-to-day;
+- Take into consideration that we, as a company, use mostly cloud native infrastructure in AWS - so using AWS based services will probably be more representative of the day-to-day;
 - For code examples feel free to use whatever you prefer but highly preferred Typed Languages or using Type decorators to better convey the design decisions - example would be Javascript with Typescript or Java - dynamic languages like Python are also viable but assisted by a type system or schemas like Pydantic to support understanding of the problem.
 
 ## Requirements

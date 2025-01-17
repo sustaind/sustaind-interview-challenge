@@ -1,4 +1,4 @@
-## Stakeholder Portal Diagram
+## Stakeholder Integration Architecture
 
 ```mermaid
 graph TD

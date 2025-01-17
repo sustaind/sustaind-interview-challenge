@@ -1,0 +1,51 @@
+Resources:
+  SubmitFeedbackFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/handlers/submitFeedback.submitFeedback
+      Runtime: nodejs23.x
+      Environment:
+        Variables:
+          STAKEHOLDER_FEEDBACK_TABLE: StakeholderFeedback
+      Events:
+        ApiGateway:
+          Type: Api
+          Properties:
+            Path: /feedback
+            Method: post
+
+  GetFeedbackForIROFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/handlers/getFeedbackForIRO.getFeedbackForIRO
+      Runtime: nodejs23.x
+      Environment:
+        Variables:
+          STAKEHOLDER_FEEDBACK_TABLE: StakeholderFeedback
+      Events:
+        ApiGateway:
+          Type: Api
+          Properties:
+            Path: /iro/{iroId}/feedback
+            Method: get
+
+  StakeholderFeedbackTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: StakeholderFeedback
+      AttributeDefinitions:
+        - AttributeName: feedbackId
+          AttributeType: S
+        - AttributeName: iroId
+          AttributeType: S
+      KeySchema:
+        - AttributeName: feedbackId
+          KeyType: HASH
+      GlobalSecondaryIndexes:
+        - IndexName: iroId-index
+          KeySchema:
+            - AttributeName: iroId
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+      BillingMode: PAY_PER_REQUEST

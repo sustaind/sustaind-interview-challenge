@@ -35,7 +35,7 @@ This challenge will be mostly to evaluate Engineering skills - risk assessment, 
 
 ## Submission
 
-Please fork this repository and submit a pull request with your solution - it should contain the following:
+Please clonet this repository and share a repository with your solution - it should contain the following:
 
 - A README.md file with your solution - referring to the requirements, domain and providing a clear explanation of your design;
 - A system_design.md file with your system design and with diagrams;
